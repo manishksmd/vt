@@ -15,9 +15,7 @@ class Page extends Component {
         className="page"
       >
         <div id="main" className="main">
-          <Header className="shadow-sm">
-            Sample Header Content!
-          </Header>
+         
           <Body>{this.props.bodyContent && this.props.bodyContent()}</Body>
         </div>
       </div>
