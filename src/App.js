@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { configureStore, history } from './store';
-import { Router, Route, Switch } from 'react-router-dom';
-import Store from './store';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { render } from 'react-dom';
+import { Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={configureStore()}>
-        <Router history={history}>
-            <Switch>
-                <Route path="/" component={Store} />
-            </Switch>
-        </Router>
-    </Provider>
-    );
-  }
-}
+import { store } from './store';
+
+import Main from './containers/Main';
+
+
+export const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <Route path="/" component={Main} />
+    </BrowserRouter>
+  </Provider>
+)
 
 export default App;
+
