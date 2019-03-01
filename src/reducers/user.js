@@ -1,4 +1,4 @@
-import { actionTypes as types } from '../constants'
+// import { actionTypes as types } from '../constants'
 
 const user = (state = {}, action) => {
   switch (action.type) {
@@ -7,4 +7,4 @@ const user = (state = {}, action) => {
   }
 }
 
-export default user
+export default user;
